@@ -33,7 +33,7 @@ def subprocess_call(proc_name, argv):
     # print("%s %s"%(proc_name, argv))
     ret_code = 0
     try:
-        process = subprocess.Popen("%s %s"%(proc_name , argv), shell=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        process = subprocess.Popen("%s %s"%(proc_name , argv), shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         # IF LINUX, SET shell=TRUE:
         # process = subprocess.Popen("%s %s"%(proc_name , argv), shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         process.wait()
